@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "Youtube Screenshot",
+  "version": "1.0",
+  "description": "Helps you screenshot youtube easily",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "permissions": [
+    "clipboardWrite",
+    "notifications"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "example@example.com"
+    }
+  }
+}
