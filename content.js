@@ -4,8 +4,8 @@ function getScreenshot() {
     const ctx = canvas.getContext("2d");
     const video = document.querySelector("video");
     console.log("video", video);
-    canvas.width = video.offsetWidth;
-    canvas.height = video.offsetHeight;
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
 
     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
     console.log("drawed image");
